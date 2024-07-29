@@ -16,11 +16,11 @@ const calculatedAmount = loan.amount + calculatedInterest;
     res.status(200).json({
 
         success: 'true',
-        data:  { 
-            totalInterest: loan.totalInterest,
-            totalAmount: loan.amount+loan.totalInterest,
-            calculatedInterest: calculatedInterest,
-            calculatedAmount: calculatedAmount,},
+        data:  
+            {totalInterest: loan.totalInterest.toFixed(2),
+            totalAmount: loan.amount+loan.totalInterest.toFixed(2),
+            calculatedInterest: calculatedInterest.toFixed(2),
+            calculatedAmount: calculatedAmount.toFixed(2),},
         message: message
 
         });

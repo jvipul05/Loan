@@ -6,7 +6,7 @@ const  {interestCalculate}=require("../utilities/Calculate");
 exports.createLoan = async(req, res) => { 
  try{
      const {name, lender, amount, interestRate, timePeriod, frequency} = req.body;
-     const totalInterest = interestCalculate(amount, interestRate, timePeriod, frequency); 
+     const totalInterest = interestCalculate(amount, interestRate, timePeriod, frequency).toFixed(2); 
      const loan = new Loans({name, lender, amount, interestRate, timePeriod, totalInterest, frequency});
      await loan.save();
      res.status(201).json({
@@ -70,7 +70,7 @@ exports.getLoanById = async(req, res) => {
 exports.updateLoan = async(req, res) => {
     try{
         const {name, lender, amount, interestRate, timePeriod, frequency} = req.body;
-        const totalInterest = interestCalculate(amount, interestRate, timePeriod, frequency);
+        const totalInterest = interestCalculate(amount, interestRate, timePeriod, frequency).toFixed(2);
         const loan = await Loans.findByIdAndUpdate(req.params.id,{name, lender, amount, interestRate, timePeriod,totalInterest, frequency} , {new: true});
         if(!loan){
             return res.status(404).json({
