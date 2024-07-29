@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "e5d2647f-a993-462d-88e3-bab9c4f44797",
+		"name": "Loan api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37194666"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"vipul jain\",\r\n    \"email\":\"jvipul@gmail.com\",\r\n    \"phone\":7470360538,\r\n    \"password\":\"Vip@2002\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://loan-zd1c.onrender.com/api/v1/users/register",
+					"protocol": "https",
+					"host": [
+						"loan-zd1c",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"register"
+					]
+				},
+				"description": "This endpoint allows a new user to register by providing their name, email, phone number, and password."
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"jvipul@gmail.com\",\r\n    \"password\":\"Vip@2002\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://loan-zd1c.onrender.com/api/v1/users/login",
+					"protocol": "https",
+					"host": [
+						"loan-zd1c",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"login"
+					]
+				},
+				"description": "This endpoint allows an existing user to log in by providing their email and password."
+			},
+			"response": []
+		},
+		{
+			"name": "Create Loan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp2aXB1bEBnbWFpbC5jb20iLCJpZCI6IjY2YTdhY2VhZTlhZjhhNWI1MmM5YmM1OCIsImlhdCI6MTcyMjI3MDU5NCwiZXhwIjoxNzIyMjc0MTk0fQ.jrYD2zLUd0De9GPChyJS7Ljdlwxo3gZwuh8penWHm5A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Loan test 5\",\r\n  \"lender\": \"Bank XYZ\",\r\n  \"amount\": 1000,\r\n  \"interestRate\": 5.5,\r\n  \"timePeriod\": 3,\r\n  \"frequency\": \"annually\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://loan-zd1c.onrender.com/api/v1/loans/createloan",
+					"protocol": "https",
+					"host": [
+						"loan-zd1c",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"loans",
+						"createloan"
+					]
+				},
+				"description": "This endpoint allows a user to create a new loan record by specifying the loan details such as name, lender, amount, interest rate, time period, and payment frequency.Requires an Authorization header with a Bearer token."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Loans",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp2aXB1bEBnbWFpbC5jb20iLCJpZCI6IjY2YTdhY2VhZTlhZjhhNWI1MmM5YmM1OCIsImlhdCI6MTcyMjI3MDU5NCwiZXhwIjoxNzIyMjc0MTk0fQ.jrYD2zLUd0De9GPChyJS7Ljdlwxo3gZwuh8penWHm5A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://loan-zd1c.onrender.com/api/v1/loans/getloans",
+					"protocol": "https",
+					"host": [
+						"loan-zd1c",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"loans",
+						"getloans"
+					]
+				},
+				"description": "This endpoint retrieves a list of all loan records. Requires an Authorization header with a Bearer token."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Loan By ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp2aXB1bEBnbWFpbC5jb20iLCJpZCI6IjY2YTdhY2VhZTlhZjhhNWI1MmM5YmM1OCIsImlhdCI6MTcyMjI3MDU5NCwiZXhwIjoxNzIyMjc0MTk0fQ.jrYD2zLUd0De9GPChyJS7Ljdlwxo3gZwuh8penWHm5A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://loan-zd1c.onrender.com/api/v1/loans/getloanbyid/66a7ad17e9af8a5b52c9bc5b",
+					"protocol": "https",
+					"host": [
+						"loan-zd1c",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"loans",
+						"getloanbyid",
+						"66a7ad17e9af8a5b52c9bc5b"
+					]
+				},
+				"description": "This endpoint retrieves the details of a specific loan by its ID. Requires an Authorization header with a Bearer token."
+			},
+			"response": []
+		},
+		{
+			"name": "Update Loans",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp2aXB1bEBnbWFpbC5jb20iLCJpZCI6IjY2YTdhY2VhZTlhZjhhNWI1MmM5YmM1OCIsImlhdCI6MTcyMjI3MDU5NCwiZXhwIjoxNzIyMjc0MTk0fQ.jrYD2zLUd0De9GPChyJS7Ljdlwxo3gZwuh8penWHm5A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Loan test 7\",\r\n  \"lender\": \"Bank XYZ\",\r\n  \"amount\": 10000,\r\n  \"interestRate\": 5.5,\r\n  \"timePeriod\": 3,\r\n  \"frequency\": \"annually\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://loan-zd1c.onrender.com/api/v1/loans/updateloan/66a7ad17e9af8a5b52c9bc5b",
+					"protocol": "https",
+					"host": [
+						"loan-zd1c",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"loans",
+						"updateloan",
+						"66a7ad17e9af8a5b52c9bc5b"
+					]
+				},
+				"description": "This endpoint allows updating the details of an existing loan by providing the loan ID and the updated loan details. Requires an Authorization header with a Bearer token."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete loan",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp2aXB1bEBnbWFpbC5jb20iLCJpZCI6IjY2YTdhY2VhZTlhZjhhNWI1MmM5YmM1OCIsImlhdCI6MTcyMjI3MDU5NCwiZXhwIjoxNzIyMjc0MTk0fQ.jrYD2zLUd0De9GPChyJS7Ljdlwxo3gZwuh8penWHm5A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://loan-zd1c.onrender.com/api/v1/loans/deleteloan/66a7694eefb3da54a68e82f1",
+					"protocol": "https",
+					"host": [
+						"loan-zd1c",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"loans",
+						"deleteloan",
+						"66a7694eefb3da54a68e82f1"
+					]
+				},
+				"description": "This endpoint allows deleting a specific loan by its ID. Requires an Authorization header with a Bearer token."
+			},
+			"response": []
+		},
+		{
+			"name": "Loan calculate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp2aXB1bEBnbWFpbC5jb20iLCJpZCI6IjY2YTdhY2VhZTlhZjhhNWI1MmM5YmM1OCIsImlhdCI6MTcyMjI3MDU5NCwiZXhwIjoxNzIyMjc0MTk0fQ.jrYD2zLUd0De9GPChyJS7Ljdlwxo3gZwuh8penWHm5A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"principal\": 10000,\r\n  \"interestRate\": 7.5,\r\n  \"timePeriod\": 2,\r\n  \"frequency\": \"annually\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://loan-zd1c.onrender.com/api/v1/loans/loanCalculate",
+					"protocol": "https",
+					"host": [
+						"loan-zd1c",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"loans",
+						"loanCalculate"
+					]
+				},
+				"description": "This endpoint calculates the loan parameters such as the compound interest based on the provided principal amount, interest rate, time period, and payment frequency. Requires an Authorization header with a Bearer token."
+			},
+			"response": []
+		}
+	]
+}
