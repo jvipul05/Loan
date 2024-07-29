@@ -3,50 +3,50 @@ This is a Loan System built with Node.js. It includes user authentication, CRUD 
 
 Features
 
-•	User Registration and Login with JWT for securing routes. 
-
-•	Password hashing with bcrypt.
-
-•	CRUD operations for 'Loan' entity.
-
-•	Compound interest calculations performed server-side for authenticated users.
+   •	User Registration and Login with JWT for securing routes. 
+   
+   •	Password hashing with bcrypt.
+   
+   •	CRUD operations for 'Loan' entity.
+   
+   •	Compound interest calculations performed server-side for authenticated users.
 
 Tech Stack
 
-•	Node.js
+   •	Node.js
+   
+   •	Express.js
+   
+   •	MongoDB
 
-•	Express.js
-
-•	MongoDB
-
-•	JWT (JSON Web Tokens)
-
-•	bcrypt
+   •	JWT (JSON Web Tokens)
+   
+   •	bcrypt
 
 Prerequisites
 
-•	Node.js
-
-•	MongoDB
+   •	Node.js
+   
+   •	MongoDB
 
 Installation
 
-1.	Clone the repository:
-   
-    git clone https:// https://github.com/jvipul05/Loan
-  	
-3.	Install dependencies:
-   
-    npm install
-  	
-5.	Set up environment variables:
-   
-    PORT=3000
-  	
-    MONGO_URI=your_mongodb_connection_string
-  	
-    JWT_SECRET=your_jwt_secret_key
-  	
-7.	Start the server:
-   
-    npm start
+   1.	Clone the repository:
+      
+       git clone https:// https://github.com/jvipul05/Loan
+     	
+   3.	Install dependencies:
+      
+       npm install
+     	
+   5.	Set up environment variables:
+      
+       PORT=3000
+     	
+       MONGO_URI=your_mongodb_connection_string
+     	
+       JWT_SECRET=your_jwt_secret_key
+     	
+   7.	Start the server:
+      
+       npm start
