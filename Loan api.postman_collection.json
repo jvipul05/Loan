@@ -264,7 +264,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://loan-zd1c.onrender.com/api/v1/loans/loanCalculate",
+					"raw": "https://loan-zd1c.onrender.com/api/v1/loans/loanCalculate/66a5f48e74b88dd35e6ff5ce",
 					"protocol": "https",
 					"host": [
 						"loan-zd1c",

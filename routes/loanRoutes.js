@@ -13,6 +13,6 @@ router.get('/getLoanById/:id',authCheck,getLoanById);
 router.put('/updateLoan/:id',authCheck,updateLoan);
 router.delete('/deleteLoan/:id',authCheck,deleteLoan);
 
-router.post('/loanCalculate',authCheck,loanCalculate);
+router.post('/loanCalculate/:id',authCheck,loanCalculate);
 
 module.exports = router;
