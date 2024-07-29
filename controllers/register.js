@@ -27,7 +27,9 @@ try{
     });
     await user.save();
     return res.status(201).json({
+
         success: 'true',
+        data:user,
         message: 'User registered successfully'
     });
 

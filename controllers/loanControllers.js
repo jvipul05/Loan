@@ -11,7 +11,7 @@ exports.createLoan = async(req, res) => {
      await loan.save();
      res.status(201).json({
             success: 'true',
-            loanData:loan,
+            data:loan,
             message: 'Loan created successfully'
     });    
 
@@ -33,7 +33,8 @@ exports.getLoans = async(req, res) => {
         const loans = await Loans.find();
         res.status(200).json({
             success: 'true',
-            loans: loans
+            data: loans,
+            message: 'Loans fetched successfully'
         });
     }catch(error){
         res.status(500).json({
@@ -54,7 +55,8 @@ exports.getLoanById = async(req, res) => {
         }
         res.status(200).json({
             success: 'true',
-            loan: loan
+            data: loan,
+            message: 'Loan fetched successfully'
         });
     }catch(error){
         res.status(500).json({
@@ -78,7 +80,7 @@ exports.updateLoan = async(req, res) => {
         }
         res.status(200).json({
             success: 'true',
-            loan: loan,
+            data: loan,
             message: 'Loan updated successfully'
         });
     }

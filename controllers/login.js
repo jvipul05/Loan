@@ -42,10 +42,15 @@ exports.login = async (req, res) => {
         };
         res.cookie('token', token, options).status(200).json({
             success: true,
-            user,
+            data: user,
             message: 'User logged in successfully'  });
     }
     catch(error){
-        res.status(500).json({message: error.message});
+        res.status(500).json(
+            {   
+                success: 'false',
+                message: error.message
+            }
+        );
     }
 }
