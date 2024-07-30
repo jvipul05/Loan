@@ -18,7 +18,7 @@ const calculatedAmount = loan.amount + calculatedInterest;
         success: 'true',
         data:  
             {totalInterest: loan.totalInterest.toFixed(2),
-            totalAmount: loan.amount+loan.totalInterest.toFixed(2),
+            totalAmount: (loan.amount+loan.totalInterest).toFixed(2),
             calculatedInterest: calculatedInterest.toFixed(2),
             calculatedAmount: calculatedAmount.toFixed(2),},
         message: message
