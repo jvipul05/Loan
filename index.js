@@ -30,7 +30,8 @@ const swaggerOptions = {
         info: {
             title: 'API Documentation',
             version: '1.0.0',
-            description: 'API Information',
+            description: 'API Information  : -----please login through user routes to access the api of loans',
+           
             contact: {
                 name: 'Vipul Jain',
             },
